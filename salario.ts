@@ -2,10 +2,10 @@
 export function nome():string { //the function returns a string 
     return "diego" 
  } 
-  function valorsalario():string{
+  export function valorsalario():string{
         return"salario mes"
     } 
- function chamar() { 
+ export function chamar() { 
     var asalario = valorsalario()
     var msg = nome() //function chamar 
     console.log(msg) 
@@ -16,12 +16,12 @@ export function nome():string { //the function returns a string
  chamar();
 
 
- function salario() : number{
-    return 2427
+ export function salario() : number{
+    return 4600
  }
  salario();
 
- function horaExtra(): void{
+ export function horaExtra(): void{
     
     var dinheiro = salario()
      console.log(dinheiro)
@@ -35,7 +35,7 @@ export function nome():string { //the function returns a string
    horaExtra();
 
 
-function inss(): void{
+export function inss(): void{
     var disconto=salario();
     
    if (disconto<=1212)
@@ -56,58 +56,92 @@ function inss(): void{
      console.log((disconto*9)/100)
    }
 
-   if (disconto<=1212)
+   if (disconto>2427 && disconto <=3461)
    { 
      
      var adisconto="faixa3 do inss"
      console.log(adisconto)
 
-     console.log((disconto*7)/100)
+     console.log((disconto*12)/100)
    }
 
-   if (disconto<=1212)
+   if (disconto >3461 && disconto <=7087)
    { 
      
-     var adisconto="faixa1 do inss"
+     var adisconto="faixa4 do inss"
      console.log(adisconto)
 
-     console.log((disconto*7)/100)
+     console.log((disconto*14)/100)
    }
-
-   if (disconto<=1212)
-   { 
-     
-     var adisconto="faixa1 do inss"
-     console.log(adisconto)
-
-     console.log((disconto*7)/100)
-   }
-
-
 
 }   
 
   inss();
 
+export function ir(): void{
+   var disconto=salario();
+   
+   if (disconto <=1903 )
+   { 
+     
+     var adisconto="faixa1 do imposto de  renda: sem desconto"
+     console.log(adisconto)
 
-function desconto():void{
+     console.log(disconto);
+   }
+  
+   
+   if (disconto >1903 && disconto <=2826 )
+   { 
+     
+     var adisconto="faixa2 do imposto de  renda: 7% desconto"
+     console.log(adisconto)
 
-} 
-   desconto();
+     console.log((disconto*7)/100);
+   }
+  
+   
+   if (disconto >2826 && disconto <=3751 )
+   { 
+     
+     var adisconto="faixa2 do imposto de  renda: 15% desconto"
+     console.log(adisconto)
 
-function ir(): void{
+     console.log((disconto*15)/100);
+   }
+  
+   
+   if (disconto >3751 && disconto <=4664 )
+   { 
+     
+     var adisconto="faixa4 do imposto de  renda: 22% desconto"
+     console.log(adisconto)
 
+     console.log((disconto*22)/100);
+   }
+  
+   
+   if (disconto >4664)
+   { 
+      
+     // correct
+     var adisconto="faixa5 do imposto de  renda: 27% desconto"
+     console.log(adisconto)
+
+     console.log((disconto*27)/100);
+    
+     
+   }
 }
    ir( );
 
-function descontoIR():void{
-
-}
-
-   descontoIR();
 
 
 function salarioLiquido():void{
 
+  
+
 }   
    salarioLiquido();
+
+

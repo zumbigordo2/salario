@@ -1,8 +1,10 @@
-import { salario } from "./salario";
-import function nome(nome,horaextra,inss) {
-    console.log(nome);
-    console.log(horaextra);
+import { horaExtra, salario } from "./salario";
+import { inss } from "./inss";
+import { ir } from "./imposto";
+
+function modelo(salario: string,faixainss: void,imposto:void ){
+    console.log(horaExtra);
     console.log(inss);
+    console.log(ir)
 }
 
-salario(process.argv[2], process.argv[3], process.argv[4]);
